@@ -1,7 +1,7 @@
-fastapi
-uvicorn
-feedparser
-requests
-beautifulsoup4
-sentence-transformers
-torch
+ fastapi
+ uvicorn
+ feedparser
+ requests
+ beautifulsoup4
+ sentence-transformers
+ torch-cpu
