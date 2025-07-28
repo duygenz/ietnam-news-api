@@ -2,12 +2,12 @@
 
 services:
   - type: web
-    name: vietnam-news-api
+    name: ietnam-news-api
     env: python
-    plan: free # Bắt đầu với gói miễn phí, có thể nâng cấp sau
+    plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
-    healthCheckPath: "/docs" # Đường dẫn kiểm tra tình trạng hoạt động
+    healthCheckPath: "/docs"
     envVars:
       - key: PYTHON_VERSION
-        value: 3.8.1 # Chỉ định phiên bản Python
+        value: 3.11 # Changed from 3.9 (or your default 3.8) to 3.11
