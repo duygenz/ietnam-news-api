@@ -1,0 +1,13 @@
+# render.yaml
+
+services:
+  - type: web
+    name: vietnam-news-api
+    env: python
+    plan: free # Bắt đầu với gói miễn phí, có thể nâng cấp sau
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: "/docs" # Đường dẫn kiểm tra tình trạng hoạt động
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9 # Chỉ định phiên bản Python
